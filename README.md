@@ -1,0 +1,80 @@
+# AutoGarden
+An Automated Garden using Arduino
+
+:Author: john1988
+:Email: reaganstovall@gmail.com
+:Date: 29/08/2017
+:Revision: version#
+:License: Public Domain
+
+= Project: Automated Garden
+
+This is a simple Automated garden progect that controls the watering of for 
+raised beds independently. 
+
+== Step 1: Installation
+
+The Instalation can be divided up into plumbing and electrical. 
+
+For the plumbing:
+The device is set to release water into each garden via a solenoid 
+valve (cheaper is better). As it is currently coded for 4 gardens, 
+simply dropping the minSaturation of the unneeded gardens to 0 will 
+remove their actions. Each soleniod will need 6~12v but less is better
+as the speed of the actuator is not a consideration. I've designed this 
+for a rain barrel to be release into the gardens in the eavenings and 
+at night if multiple gardens need watering. This will reduce chances of 
+to more sensitive plants and also reduce lost water to evaporation.
+
+The Electrical:
+In the GardenSchematic, it can be seen how the soil saturation sensors 
+for lack of a better name, yes I'm disregarding the ones I read, will 
+be placed in each of the gardens, ideally between the water spigots. these
+need a bias resistor or potentiometer (they are somtimes sold in a kit) but
+can otherwise be treated as plug and play. The photo resistor needs to be
+placed facing up somewhere in direct light (though admittedly not the most
+important piece of the setup). The program is setup for 2 temperature sensors 
+for the potential combination of indoor garden. The Arduino needs only a 3.3v 
+power supply.
+
+== Step 2: Assemble the circuit
+
+//ToDo
+
+== Step 3: Load the code
+
+Upload the code contained in this sketch on to your board
+
+=== Folder structure
+
+....
+ AutoGarden                => Arduino sketch folder
+  ├── AutoGarden.ino       => main Arduino file
+  ├── GardenSchematic.ino => Basic Schematic
+  ├── layout.png          => (optional) an image of the layout
+  └── ReadMe.adoc         => this file
+....
+
+=== License
+This project is released under a {License} License.
+
+=== Contributing
+To contribute to this project please contact john1988 <reaganstovall@gmail.com>
+
+=== BOM
+Add the bill of the materials you need for this project.
+
+//TODO 
+ 
+|===
+| ID | Part name      | Part number | Quantity
+| R1 | 10k Resistor   | 1234-abcd   | 10       
+| L1 | Red LED        | 2345-asdf   | 5        
+| A1 | Arduino Zero   | ABX00066    | 1        
+|===
+
+
+=== Help
+This document is written in the _AsciiDoc_ format, a markup language to describe documents. 
+If you need help you can search the http://www.methods.co.nz/asciidoc[AsciiDoc homepage]
+or consult the http://powerman.name/doc/asciidoc[AsciiDoc cheatsheet]
